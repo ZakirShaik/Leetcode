@@ -12,7 +12,7 @@ class Solution {
 public:
     int mySqrt(int x) {
         if(x < 2) return x;
-        int start = 2, end = x/2;
+        int start = 2, end = x/2; // We are considering x/2 as end because the square root will not be greater than half of the number.
         long square;
         while(start <= end) {
             int mid = start + (end - start)/2; // Here integer flow doesn't happen. So, we can use int.
@@ -24,8 +24,8 @@ public:
         }
         return end;
     }
-// Solution: Time Complexity: O(log n); Space Complexity: O(1)
-//public:
+// Solution 1: Time Complexity: O(log n); Space Complexity: O(1)
+// public:
 //    int mySqrt(int x) {
 //        if(x < 2) return x;
 //        long long start = 1, end = x/2, squareRoot = 0;
